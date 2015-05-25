@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSAUHT</title>
+        <!-- CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/materialize/css/materialize.css">
-        <!-- JQuery -->
-        <script src="<?php echo base_url(); ?>/assets/jquery-2.1.4.js"></script>
-        <!-- Materialize Core JavaScript -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsauth.css">
+        
+        <!-- Scripts -->
+        <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.js"></script>
         <script src="<?php echo base_url(); ?>/assets/materialize/js/materialize.js"></script>
 
     </head>
@@ -26,9 +28,9 @@
         <div class="container">
 
             <div class="row section">
-
-
+                <?php echo $contents; ?>
             </div>
+            
         </div>
     </body>
 </html>
