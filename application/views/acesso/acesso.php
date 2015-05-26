@@ -13,8 +13,7 @@
         </div>
     </div>
 
-    <button class="btn waves-effect waves-light" type="submit" name="entrar">Entrar
+    <button class="btn waves-effect waves-light" type="submit">Entrar
         <i class="mdi-content-send right"></i>
     </button>
-
 </form>
