@@ -9,4 +9,8 @@ class Acesso extends CI_Controller{
     public function index(){
         $this->template->load('acesso/acesso', array(), null, 'Entrar');
     }
+    
+    public function login(){
+        
+    }
 }

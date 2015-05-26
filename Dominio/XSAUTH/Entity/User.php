@@ -41,12 +41,12 @@ class User {
     private $password;
     
     /**
-     * @ORM\Column(type="bool", unique=false, nullable=false)
+     * @ORM\Column(type="boolean", unique=false, nullable=false)
      */
     private $admin;
     
     /**
-     * @ORM\Column(type="bool", unique=false, nullable=false)
+     * @ORM\Column(type="boolean", unique=false, nullable=false)
      */
     private $active;
     
@@ -68,7 +68,7 @@ class User {
     function __construct($id = NULL, $group = NULL, $name = NULL, $email = NULL, $password = NULL, $admin = NULL, $active = NULL,
             $type = NULL, $birthdate = NULL, $phone = NULL) {
         $this->id = $id;
-        $this->group = new Group();
+        $this->group = $group;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;

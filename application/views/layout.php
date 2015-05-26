@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSAUHT</title>
+        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSAUTH</title>
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/materialize/css/materialize.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsauth.css">

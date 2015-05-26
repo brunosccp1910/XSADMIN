@@ -20,10 +20,9 @@ class Cadastro extends CI_Controller{
         $dataPost = $this->input->post();
         $this->load->model('usermodel');
         try{
-            $retorno = $this->usermodel->cadastrar($dataPost['name'],$dataPost['email'],$dataPost['password'],$dataPost['birthdate'],$dataPost['phone']);
+            $this->usermodel->cadastrar($dataPost['name'],$dataPost['email'],$dataPost['password'],$dataPost['birthdate'],$dataPost['phone']);
         }  catch (\Exception $ex){
             $retorno = $ex->getMessage();
         }
-        print_r($retorno);
     }
 }

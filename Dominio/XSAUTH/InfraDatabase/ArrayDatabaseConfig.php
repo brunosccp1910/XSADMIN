@@ -27,7 +27,7 @@ class ArrayDatabaseConfig {
       $databaseConfig['production']['hostname'] =  '';
       $databaseConfig['production']['username'] =  '';
       $databaseConfig['production']['password'] =  '';
-      $databaseConfig['production']['database'] =  'BD_PORTAL_NCA';
+      $databaseConfig['production']['database'] =  'BD_USER_MANAGER';
       $databaseConfig['production']['dbdriver'] =  'pdo_mysql';
       $databaseConfig['production']['charset'] =  'utf8';
       
@@ -35,7 +35,7 @@ class ArrayDatabaseConfig {
       $databaseConfig['test']['hostname'] =  'localhost';
       $databaseConfig['test']['username'] =  'root';
       $databaseConfig['test']['password'] =  '123456';
-      $databaseConfig['test']['database'] =  'BD_PORTAL_NCA';
+      $databaseConfig['test']['database'] =  'BD_USER_MANAGER';
       $databaseConfig['test']['dbdriver'] =  'pdo_mysql';
       $databaseConfig['test']['charset'] =  'utf8';
       

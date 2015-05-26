@@ -1,6 +1,7 @@
 <?php
 
 use XSAUTH\Facade\UserFacade;
+use XSAUTH\Entity\User;
 /**
  * Description of UserModel
  *
@@ -9,9 +10,12 @@ use XSAUTH\Facade\UserFacade;
 class UserModel extends CI_Model{
     
     public function cadastrar($name, $email, $password, $birthdate, $phone){
+        $birthdate = str_replace('/', '-', $birthdate);
+        $user = new User(NULL, NULL, $name, $email, md5($password), $admin = false, $active = true, $type = 'visitor', 
+                    new DateTime($birthdate), $phone);
         $facade = new UserFacade();
         try{
-            return $facade->save();
+            return $facade->save($user);
         }  catch (\Exception $ex){
             throw new Exception($ex->getMessage());
         }
