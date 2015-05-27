@@ -7,3 +7,69 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.admin-header, main, .admin-footer{
+    padding-left: 240px;
+}
+
+a.button-collapse.top-nav.full {
+    line-height: 122px;
+}
+.logo > .brand-logo{
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+}
+
+.bold > a {
+    font-weight: bold;
+}
+
+nav .brand-title {
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    position: absolute;
+}
+
+ul.side-nav.fixed li.logo {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.side-nav .collapsible-header {
+    background-color: transparent;
+    border: medium none;
+    height: auto;
+    line-height: inherit;
+    margin: 0 1rem;
+}
+
+a.button-collapse.top-nav {
+    color: #fff;
+    float: none;
+    font-size: 32px;
+    height: 48px;
+    left: 7.5%;
+    margin-left: 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 48px;
+    z-index: 2;
+}
+a {
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+    .admin-header, main, .admin-footer {
+        padding-left: 0;
+    }
+}

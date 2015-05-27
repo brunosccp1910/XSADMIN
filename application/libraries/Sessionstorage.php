@@ -26,4 +26,10 @@ class Sessionstorage {
     public function getUserSession() {
         return $this->CI->session->userdata("xsauth");
     }
+    
+    public function unsetUserSession(){
+        $this->CI->session->unset_userdata('xsauth');
+        $this->CI->session->sess_destroy();
+        return TRUE;
+    }
 }

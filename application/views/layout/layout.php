@@ -10,19 +10,24 @@
         <!-- Scripts -->
         <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.js"></script>
         <script src="<?php echo base_url(); ?>/assets/materialize/js/materialize.js"></script>
-
+        <script src="<?php echo base_url(); ?>/assets/js/xsauth.js"></script>
     </head>
     <body>
         <header>
-            <nav class="blue-grey" role="navigation">
-                <div class="nav-wrapper container">
-                    <a href="<?php echo site_url(); ?>" class="brand-logo">XSAUTH</a>
+            <nav class="blue-grey top-nav" role="navigation">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="<?php echo site_url(); ?>" class="brand-logo">XSAUTH</a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="<?php echo site_url('/cadastro'); ?>"><i class="mdi-content-add left"></i>Cadastrar</a></li>
                         <li><a href="<?php echo site_url('/acesso'); ?>"><i class="mdi-action-input left"></i>Entrar</a></li>
                     </ul>
+                    </div>
+                    
                 </div>
             </nav>
+            
+            
         </header>
 
         <div class="container">

@@ -6,14 +6,19 @@ if (!defined('BASEPATH'))
 class Template {
 
     var $template_data = array();
-    var $layout = 'layout';
+    var $layout = 'layout/layout';
+    function setLayout($layout){
+        $this->layout = 'layout/'.$layout;
+    }
     function set($name, $value) {
         $this->template_data[$name] = $value;
     }
 
     function load($view = '', $view_data = array(), $template = '', $title = '', $return = FALSE) {
         $this->CI = & get_instance();
-        
+        if($this->CI->sessionstorage->hasSession()){
+            $this->setLayout('layout-admin');
+        }
         $this->set('title' , $title);
         
         $this->set('contents', $this->CI->load->view($view, $view_data, TRUE));

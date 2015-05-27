@@ -31,4 +31,9 @@ class Acesso extends MY_Controller{
            throw new \Exception($ex->getMessage());
        }
     }
+    
+    public function logout(){
+        $this->sessionstorage->unsetUserSession();
+        redirect('/acesso');
+    }
 }
