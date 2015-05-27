@@ -30,6 +30,14 @@ class UserBusiness extends AbstractBusiness{
         }
     }
     
+    public function findByEmail($userEmail){
+       try{
+            return $this->findOneBy(array('email' => $userEmail));
+        }  catch (\Exception $ex){
+            throw new Exception($ex->getMessage());
+        }
+    }
+    
     function attachEntity($object) {
         return $object;
     }

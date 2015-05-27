@@ -29,4 +29,23 @@ class UserModel extends CI_Model{
             throw new Exception($ex->getMessage());
         }
     }
+    
+    public function createSessionData($userEmail){
+        $facade = new UserFacade();
+        try{
+            $session = array();
+           $user = $facade->findByEmail($userEmail);
+           if($user != NULL){
+               $session = array('id'=>$user->getId(), 'name'=>$user->getName() , 'email'=>$user->getEmail(), 
+                   'admin'=>$user->getAdmin(), 'active'=>$user->getActive(), 'type'=>$user->getType());
+               if($user->getGroup() != NULL){
+                   $session['group_id'] = $user->getGroup()->getId();
+                   $session['group_name'] = $user->getGroup()->getName();
+               }
+           }
+           return $session;
+        }catch(\Exception $ex){
+            throw new Exception($ex->getMessage());
+        }
+    }
 }

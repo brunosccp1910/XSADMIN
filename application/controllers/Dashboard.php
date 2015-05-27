@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author lazaro
  */
-class Dashboard {
-    //put your code here
+class Dashboard extends MY_Controller{
+    public function index(){
+        $this->template->load('dashboard/index', 'array', null, 'Dashboard');
+    }
 }
