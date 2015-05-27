@@ -91,13 +91,12 @@ abstract class AbstractBusiness {
      * @return Object
      * @throws BusinessException
      */
-    public function findOneBy($param) {
+    public function findOneBy($params) {
         try {
-            $retorno = $this->dao->findOneBy(get_class($this->entityBusiness), $param);
+            $retorno = $this->dao->findOneBy(get_class($this->entityBusiness), $params);
         } catch (DAOException $exc) {
             throw new \Exception($exc->getMessage());
         }
-
         return $retorno;
     }
 

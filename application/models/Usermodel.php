@@ -1,5 +1,5 @@
 <?php
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 use XSAUTH\Facade\UserFacade;
 use XSAUTH\Entity\User;
 /**
@@ -16,6 +16,15 @@ class UserModel extends CI_Model{
         $facade = new UserFacade();
         try{
             return $facade->save($user);
+        }  catch (\Exception $ex){
+            throw new Exception($ex->getMessage());
+        }
+    }
+    
+    public function authenticate($email, $password){
+        $facade = new UserFacade();
+        try{
+            return $facade->authenticate($email, $password);
         }  catch (\Exception $ex){
             throw new Exception($ex->getMessage());
         }

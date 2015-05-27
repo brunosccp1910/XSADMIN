@@ -262,6 +262,7 @@ define('VIEWPATH', $view_folder);
  * And away we go...
  */
 date_default_timezone_set('America/Belem');
+session_save_path('tmp/');
 
 require_once 'bootstrap.php';
 require_once BASEPATH . 'core/CodeIgniter.php';

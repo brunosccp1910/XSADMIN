@@ -16,6 +16,20 @@ class UserBusiness extends AbstractBusiness{
         parent::setEntityBusiness(new User());
     }
     
+    public function authenticate($user, $password){
+        try{
+            $userEntity = $this->findOneBy(array('email' => $user, 'password' => $password));
+        }  catch (\Exception $ex){
+            throw new Exception($ex->getMessage());
+        }
+        
+        if($userEntity != NULL){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+    
     function attachEntity($object) {
         return $object;
     }

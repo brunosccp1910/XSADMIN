@@ -54,11 +54,11 @@ abstract class AbstractFacade {
         }
 
         try {
-            $parametro = (count($arguments) == 0 ? NULL : $arguments[0]);
+            $parameters = (count($arguments) == 0 ? NULL : $arguments);
             
             $this->gerenciadorConexao->abrirTransacao();
 
-            $retorno = call_user_func(array($this->business, $name), $parametro);
+            $retorno = call_user_func_array(array($this->business, $name), $parameters);
 
             $this->gerenciadorConexao->comitarTransacao();
         } catch (InfraEstruturaException $ex) {

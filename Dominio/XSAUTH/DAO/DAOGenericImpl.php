@@ -115,15 +115,16 @@ class DAOGenericImpl {
         }
     }
     
+    
     /**
      * Busca um resgistro com base em um parâmetro
      *
      * @param $object dominio
      * @param BigInt $param Parâmetro de busca
      */
-    public function findOneBy($object, $param) {
+    public function findOneBy($object, $params) {
         try {
-            return self::$entityManager->getRepository($object)->findOneBy($param);
+            return self::$entityManager->getRepository($object)->findOneBy($params);
         } catch (ORMException $exc) {
             throw new DAOException($exc->getMessage(), $exc->getCode(), $exc->getPrevious());
         }
