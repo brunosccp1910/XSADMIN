@@ -6,7 +6,7 @@
             <label for="user">Nome</label>
         </div>
         <div class="input-field col s12">
-            <input id="email" name="email" type="text" placeholder="email@email.com" class="validate">
+            <input id="email" name="email" type="email" class="validate">
             <label for="email">Email</label>
         </div>
         <div class="input-field col s12">

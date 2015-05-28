@@ -48,13 +48,35 @@ ul.side-nav.fixed li.logo {
     margin: 0 1rem;
 }
 
+#img-perfil{
+    margin-top: 17px;
+    margin-left: 5px;
+}
+
+#text-gravatar{
+    margin-top: -6px;
+    margin-left: 5px;
+}
+nav .dropdown-button{
+    max-width: 250px;
+    text-overflow: ellipsis; 
+}
+
+.section.perfil input:disabled{
+    color: rgba(0, 0, 0, 0.54);
+}
+#btn-editar-perfil{
+    margin-left: -20px;
+    margin-top: 24px;
+}
+
 a.button-collapse.top-nav {
     color: #fff;
     float: none;
     font-size: 32px;
     height: 48px;
     left: 7.5%;
-    margin-left: 1.5rem;
+    margin-top: -30px;
     position: absolute;
     text-align: center;
     top: 0;
@@ -72,4 +94,10 @@ a {
     .admin-header, main, .admin-footer {
         padding-left: 0;
     }
+    nav .brand-title{
+        margin-left: 100px;
+    }
+    #btn-editar-perfil{
+    margin-top: 20px;
+}
 }

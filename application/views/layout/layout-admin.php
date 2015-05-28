@@ -17,13 +17,13 @@
             <nav class="blue-grey top-nav" role="navigation">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="#" class="brand-title"><?php echo $title; ?></a>
+                        <a href="#" class="brand-logo"><?php echo $title; ?></a>
                         <ul class="right hide-on-med-and-down">
                             <!-- Dropdown Trigger -->
                             <li>
-                                <a class="dropdown-button" href="#!" data-activates="dropdown1">
-                                    Bem vindo!
-                                    <i class="mdi-navigation-arrow-drop-down right"></i>
+                                <a class="dropdown-button" href="#!" data-activates="dropdown-sair">
+                                    <?php echo strlen($userData['name']) > 20 ? substr($userData['name'], 0, 16) . '...' : $userData['name']; ?>
+                                    <img id="img-perfil" class="responsive-img circle right" src="<?php echo gravatar($userData['email'], 32) ?>">
                                 </a>
                             </li>
                         </ul>
@@ -31,8 +31,7 @@
                 </div>
             </nav>
             <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">Perfil</a></li>
+            <ul id="dropdown-sair" class="dropdown-content">
                 <li><a href="<?php echo site_url('/acesso/logout'); ?>">Sair</a></li>
             </ul>
 
@@ -50,15 +49,19 @@
                 <li class="bold">
                     <a class="waves-effect waves-light" href="#">Perfil</a>
                 </li>
-                <li class="bold">
-                    <a class="waves-effect waves-light collapsible-header" href="#">Grupo</a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li>
-                                <a href="badges.html">Badges</a>
-                            </li>
-                        </ul>
-                    </div>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="bold">
+                            <a class="collapsible-header  waves-effect waves-teal">
+                                Grupo
+                            </a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="color.html">Membros</a></li>
+                                </ul>
+                            </div>
+                        </li> 
+                    </ul>
                 </li>
             </ul>
 
@@ -66,11 +69,9 @@
         </header>
         <main>
             <div class="container">
-
                 <div class="row section">
                     <?php echo $contents; ?>
                 </div>
-
             </div>   
         </main>
 

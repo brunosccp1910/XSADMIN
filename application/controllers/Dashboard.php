@@ -8,6 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Dashboard extends MY_Controller{
     public function index(){
-        $this->template->load('dashboard/index', 'array', null, 'Dashboard');
+        redirect('dashboard/perfil');
+    }
+    
+    public function perfil(){
+        $userData = $this->sessionstorage->getUserSession();
+        $this->template->load('dashboard/index', array('userData' => $userData), null, 'Dashboard');
     }
 }

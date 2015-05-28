@@ -37,7 +37,8 @@ class UserModel extends CI_Model{
            $user = $facade->findByEmail($userEmail);
            if($user != NULL){
                $session = array('id'=>$user->getId(), 'name'=>$user->getName() , 'email'=>$user->getEmail(), 
-                   'admin'=>$user->getAdmin(), 'active'=>$user->getActive(), 'type'=>$user->getType());
+                   'admin'=>$user->getAdmin(), 'active'=>$user->getActive(), 'type'=>$user->getType(),
+                   'birthdate'=>$user->getBirthdate()->format('d/m/Y'), 'phone'=>$user->getPhone());
                if($user->getGroup() != NULL){
                    $session['group_id'] = $user->getGroup()->getId();
                    $session['group_name'] = $user->getGroup()->getName();

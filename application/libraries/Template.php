@@ -17,6 +17,7 @@ class Template {
     function load($view = '', $view_data = array(), $template = '', $title = '', $return = FALSE) {
         $this->CI = & get_instance();
         if($this->CI->sessionstorage->hasSession()){
+            $this->set('userData', $this->CI->sessionstorage->getUserSession());
             $this->setLayout('layout-admin');
         }
         $this->set('title' , $title);
