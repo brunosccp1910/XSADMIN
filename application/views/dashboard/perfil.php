@@ -24,6 +24,6 @@
             <input disabled value="<?php echo $userData['phone']; ?>" id="phone" name="phone" type="text" placeholder="99 99999-9999" class="validate">
             <label for="phone">Telefone</label>
         </div>
-        <a id="btn-editar-perfil" class="waves-effect waves-light btn">Editar</a>
+        <a id="btn-editar-perfil" class="waves-effect waves-light btn cyan lighten-2">Editar</a>
     </div>
 </div>
