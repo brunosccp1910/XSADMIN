@@ -1,9 +1,9 @@
 <?php
 
-namespace XSAUTH\Facade;
+namespace XSADMIN\Facade;
 
-use XSAUTH\Facade\AbstractFacade;
-use XSAUTH\Business\UserBusiness;
+use XSADMIN\Facade\AbstractFacade;
+use XSADMIN\Business\UserBusiness;
 /**
  * Description of UserFacade
  *

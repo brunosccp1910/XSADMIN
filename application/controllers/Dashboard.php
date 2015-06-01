@@ -13,6 +13,19 @@ class Dashboard extends MY_Controller{
     
     public function perfil(){
         $userData = $this->sessionstorage->getUserSession();
-        $this->template->load('dashboard/index', array('userData' => $userData), null, 'Dashboard');
+        $this->template->load('dashboard/perfil', array('userData' => $userData), null, 'Perfil');
+    }
+    
+    public function meugrupo(){
+        $userData = $this->sessionstorage->getUserSession();
+        $this->template->load('dashboard/meugrupo', array('userData' => $userData), null, 'Meu Grupo');
+    }
+    public function usuarios(){
+        $userData = $this->sessionstorage->getUserSession();
+        $this->template->load('dashboard/usuarios', array('userData' => $userData), null, 'Usuários');
+    }
+    public function grupos(){
+        $userData = $this->sessionstorage->getUserSession();
+        $this->template->load('dashboard/grupos', array('userData' => $userData), null, 'Grupos');
     }
 }

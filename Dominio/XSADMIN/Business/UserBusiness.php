@@ -1,10 +1,10 @@
 <?php
 
-namespace XSAUTH\Business;
+namespace XSADMIN\Business;
 
-use XSAUTH\Business\AbstractBusiness;
-use XSAUTH\DAO\DAOGenericImpl;
-use XSAUTH\Entity\User;
+use XSADMIN\Business\AbstractBusiness;
+use XSADMIN\DAO\DAOGenericImpl;
+use XSADMIN\Entity\User;
 /**
  * Description of UserBusiness
  *
@@ -20,7 +20,7 @@ class UserBusiness extends AbstractBusiness{
         try{
             $userEntity = $this->findOneBy(array('email' => $user, 'password' => $password));
         }  catch (\Exception $ex){
-            throw new Exception($ex->getMessage());
+            throw new \Exception($ex->getMessage());
         }
         
         if($userEntity != NULL){

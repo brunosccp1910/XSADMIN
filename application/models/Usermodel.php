@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-use XSAUTH\Facade\UserFacade;
-use XSAUTH\Entity\User;
+use XSADMIN\Facade\UserFacade;
+use XSADMIN\Entity\User;
 /**
  * Description of UserModel
  *

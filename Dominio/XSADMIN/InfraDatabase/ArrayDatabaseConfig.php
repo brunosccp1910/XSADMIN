@@ -1,12 +1,12 @@
 <?php
 /**
- * XSAUTH
+ * XSADMIN
  * @author Lázaro Henrique <lazarohcm@gmail.com>   
  * @version 1.0
  
  */
 
-namespace XSAUTH\InfraDatabase;
+namespace XSADMIN\InfraDatabase;
 
 /**
  * Camada InfraDatabase
@@ -27,7 +27,7 @@ class ArrayDatabaseConfig {
       $databaseConfig['production']['hostname'] =  '';
       $databaseConfig['production']['username'] =  '';
       $databaseConfig['production']['password'] =  '';
-      $databaseConfig['production']['database'] =  'BD_XSAUTH';
+      $databaseConfig['production']['database'] =  'BD_XSADMIN';
       $databaseConfig['production']['dbdriver'] =  'pdo_mysql';
       $databaseConfig['production']['charset'] =  'utf8';
       
@@ -35,7 +35,7 @@ class ArrayDatabaseConfig {
       $databaseConfig['test']['hostname'] =  'localhost';
       $databaseConfig['test']['username'] =  'root';
       $databaseConfig['test']['password'] =  '123456';
-      $databaseConfig['test']['database'] =  'BD_XSAUTH';
+      $databaseConfig['test']['database'] =  'BD_XSADMIN';
       $databaseConfig['test']['dbdriver'] =  'pdo_mysql';
       $databaseConfig['test']['charset'] =  'utf8';
       

@@ -356,7 +356,7 @@ $config['encryption_key'] = '';
 |
 */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'xsauth';
+$config['sess_cookie_name'] = 'XSADMIN';
 $config['sess_expiration'] = 0;
 $config['sess_save_path'] = 'tmp';
 $config['sess_match_ip'] = FALSE;

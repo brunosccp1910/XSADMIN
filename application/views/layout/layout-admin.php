@@ -2,15 +2,15 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSAUTH</title>
+        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSADMIN</title>
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/materialize/css/materialize.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsauth.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsadmin.css">
 
         <!-- Scripts -->
         <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.js"></script>
         <script src="<?php echo base_url(); ?>/assets/materialize/js/materialize.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/xsauth.js"></script>
+        <script src="<?php echo base_url(); ?>/assets/js/xsadmin.js"></script>
     </head>
     <body>
         <header class="admin-header">
@@ -42,18 +42,22 @@
             </div>
             <ul id="nav-mobile" class="side-nav fixed">
                 <li class="logo">
-                    <a id="logo-container" class="brand-logo" href="<?php echo site_url('/dashboard') ?>">
-                        XSAUTH
+                    <a id="logo-container" class="brand-logo" href="<?php echo site_url('/dashboard'); ?>">
+                        <b>XSADMIN</b>
                     </a>
                 </li>
                 <li class="bold">
-                    <a class="waves-effect waves-light" href="#">Perfil</a>
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/perfil'); ?>">Perfil</a>
                 </li>
-                <li class="no-padding">
+                <li class="bold">
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/meugrupo'); ?>">Meu Grupo</a>
+                </li>
+                
+<!--                <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold">
-                            <a class="collapsible-header  waves-effect waves-teal">
-                                Grupo
+                            <a class="collapsible-header  waves-effect waves-light">
+                                Meu Grupo
                             </a>
                             <div class="collapsible-body">
                                 <ul>
@@ -62,10 +66,15 @@
                             </div>
                         </li> 
                     </ul>
+                </li>-->
+                <li class="bold">
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/usuarios'); ?>">Usuários</a>
+                </li>
+                <li class="bold">
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/grupos'); ?>">Grupos</a>
                 </li>
             </ul>
-
-
+            
         </header>
         <main>
             <div class="container">

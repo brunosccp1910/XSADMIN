@@ -15,11 +15,13 @@ main {
 a.button-collapse.top-nav.full {
     line-height: 122px;
 }
-.logo > .brand-logo{
-    color: #fff;
+#logo-container{
+    color: #000;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
+    height: 64px;
+    line-height: 64px;
 }
 
 .bold > a {
@@ -34,6 +36,10 @@ nav .brand-title {
     position: absolute;
 }
 
+.collection{
+    overflow: visible;
+}
+
 ul.side-nav.fixed li.logo {
     border-bottom: 1px solid #ddd;
     margin-bottom: 16px;
@@ -46,6 +52,12 @@ ul.side-nav.fixed li.logo {
     height: auto;
     line-height: inherit;
     margin: 0 1rem;
+}
+
+ul.side-nav.fixed li a {
+    font-size: 13px;
+    height: 44px;
+    line-height: 44px;
 }
 
 #img-perfil{
@@ -70,6 +82,13 @@ nav .dropdown-button{
     margin-top: 24px;
 }
 
+.inline-header{
+    display: inline-block;
+}
+.dropdown-content{
+    z-index: 2;
+}
+
 a.button-collapse.top-nav {
     color: #fff;
     float: none;
@@ -88,6 +107,10 @@ a {
 }
 a {
     background-color: transparent;
+}
+
+#lista-grupos{
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 992px) {

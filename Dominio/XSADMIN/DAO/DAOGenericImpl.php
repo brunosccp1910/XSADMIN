@@ -1,14 +1,14 @@
 <?php
 
 /**
- * UFMA - XSAUTH 
+ * UFMA - XSADMIN 
 
  * @author Lázaro Henrique <lazarohcm@gmail.com>   
  * @version 1.0
 
  */
 
-namespace XSAUTH\DAO;
+namespace XSADMIN\DAO;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMException;

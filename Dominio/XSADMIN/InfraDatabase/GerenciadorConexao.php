@@ -1,16 +1,16 @@
 <?php
 /**
- * UFMA - XSAUTH 
+ * UFMA - XSADMIN 
 
  * @author Lázaro Henrique <lazarohcm@gmail.com>   
  * @version 1.0
  
  */
 
-namespace XSAUTH\InfraDatabase;
+namespace XSADMIN\InfraDatabase;
 
-use XSAUTH\InfraDatabase\InterfaceInfraDatabase\IGerenciadorConexaoDAO;
-use XSAUTH\DAO\DAOGenericImpl;
+use XSADMIN\InfraDatabase\InterfaceInfraDatabase\IGerenciadorConexaoDAO;
+use XSADMIN\DAO\DAOGenericImpl;
 use InfraEstrutura\BancodeDados\AtributosConexaoDoctrine;
 use InfraEstrutura\BancodeDados\FabricaConexao\AbstractFabricaConexao;
 use InfraEstrutura\BancodeDados\EnumTipoConexao;

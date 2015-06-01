@@ -14,21 +14,21 @@ class Sessionstorage {
     }
     public function hasSession() {
         $arrayUserData = $this->CI->session->all_userdata();
-        if (array_key_exists("xsauth", $arrayUserData)) {
+        if (array_key_exists("XSADMIN", $arrayUserData)) {
             return TRUE;
         }
         return FALSE;
     }
     public function setUserSession($value) {
-        $this->CI->session->set_userdata('xsauth', $value);
+        $this->CI->session->set_userdata('XSADMIN', $value);
     }
 
     public function getUserSession() {
-        return $this->CI->session->userdata("xsauth");
+        return $this->CI->session->userdata("XSADMIN");
     }
     
     public function unsetUserSession(){
-        $this->CI->session->unset_userdata('xsauth');
+        $this->CI->session->unset_userdata('XSADMIN');
         $this->CI->session->sess_destroy();
         return TRUE;
     }

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace XSAUTH\Facade;
+namespace XSADMIN\Facade;
 
-use XSAUTH\InfraDatabase\GerenciadorConexao;
-use XSAUTH\InfraDatabase\ArrayDatabaseConfig;
+use XSADMIN\InfraDatabase\GerenciadorConexao;
+use XSADMIN\InfraDatabase\ArrayDatabaseConfig;
 use InfraEstrutura\Exception\InfraEstruturaException;
 use InfraEstrutura\Exception\FacadeException;
 use InfraEstrutura\Exception\BusinessException;

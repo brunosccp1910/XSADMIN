@@ -2,22 +2,22 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSAUTH</title>
+        <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSADMIN</title>
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/materialize/css/materialize.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsauth.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsadmin.css">
 
         <!-- Scripts -->
         <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.js"></script>
         <script src="<?php echo base_url(); ?>/assets/materialize/js/materialize.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/xsauth.js"></script>
+        <script src="<?php echo base_url(); ?>/assets/js/xsadmin.js"></script>
     </head>
     <body>
         <header>
             <nav class="blue-grey top-nav" role="navigation">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="<?php echo site_url(); ?>" class="brand-logo">XSAUTH</a>
+                        <a href="<?php echo site_url(); ?>" class="brand-logo">XSADMIN</a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="<?php echo site_url('/cadastro'); ?>"><i class="mdi-content-add left"></i>Cadastrar</a></li>
                         <li><a href="<?php echo site_url('/acesso'); ?>"><i class="mdi-action-input left"></i>Entrar</a></li>

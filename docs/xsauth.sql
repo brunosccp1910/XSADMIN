@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.6.19, for Linux (x86_64)
 --
--- Host: localhost    Database: BD_XSAUTH
+-- Host: localhost    Database: BD_XSADMIN
 -- ------------------------------------------------------
--- Server version	5.5.5-10.0.17-MariaDB
+-- Server version	5.5.5-10.0.19-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -73,7 +73,7 @@ CREATE TABLE `002_user` (
 
 LOCK TABLES `002_user` WRITE;
 /*!40000 ALTER TABLE `002_user` DISABLE KEYS */;
-INSERT INTO `002_user` VALUES (1,NULL,'Admin Henrique de Carvalho Marques','admin@mail.com','8c3ec52da114ef6788aabf4367b2e210',1,1,'root','0000-00-00',NULL);
+INSERT INTO `002_user` VALUES (1,NULL,'Admin Henrique de Carvalho Marques','xsadmin@pet.ufma.br','8c3ec52da114ef6788aabf4367b2e210',1,1,'root','0000-00-00',NULL);
 /*!40000 ALTER TABLE `002_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -86,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-28 17:34:07
+-- Dump completed on 2015-06-01  9:08:44

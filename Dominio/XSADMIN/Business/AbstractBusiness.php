@@ -1,13 +1,13 @@
 <?php
 
-namespace XSAUTH\Business;
+namespace XSADMIN\Business;
 
 use InfraEstrutura\Exception\DAOException;
 
 /**
  * Absctract Business
  *
- * @package XSAUTH\Business
+ * @package XSADMIN\Business
  */
 abstract class AbstractBusiness {
 

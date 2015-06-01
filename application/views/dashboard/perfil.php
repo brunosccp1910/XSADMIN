@@ -1,8 +1,5 @@
 <div class="col s12 m9 l10">
     <div class="section perfil">
-        <h5>
-            Perfil
-        </h5>
         <div class="col s4">
             <img src="<?php echo gravatar($userData['email'], '60'); ?>" alt="" class="circle responsive-img">
             <p id="text-gravatar">

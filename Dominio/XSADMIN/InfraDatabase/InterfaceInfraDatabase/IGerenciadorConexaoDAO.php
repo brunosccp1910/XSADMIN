@@ -1,13 +1,13 @@
 <?php
 /**
- * UFMA - XSAUTH 
+ * UFMA - XSADMIN 
 
  * @author Lázaro Henrique <lazarohcm@gmail.com>   
  * @version 1.0
  
  */
 
-namespace XSAUTH\InfraDatabase\InterfaceInfraDatabase;
+namespace XSADMIN\InfraDatabase\InterfaceInfraDatabase;
 
 /**
  * Camada InfraDatabase

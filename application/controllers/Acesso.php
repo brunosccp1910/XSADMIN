@@ -28,6 +28,7 @@ class Acesso extends MY_Controller{
                redirect('/acesso');
            }
        }  catch (\Exception $ex){
+//           redirect('/acesso');
            throw new \Exception($ex->getMessage());
        }
     }

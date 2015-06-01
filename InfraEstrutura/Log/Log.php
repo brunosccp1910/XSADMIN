@@ -1,6 +1,6 @@
 <?php
 /**
- * UFMA - XSAUTH 
+ * UFMA - XSADMIN 
 
  * @author Lázaro Henrique <lazarohcm@gmail.com>   
  * @version 1.0
