@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #fff;
 }
 
 main {
@@ -77,10 +78,29 @@ nav .dropdown-button{
 .section.perfil input:disabled{
     color: rgba(0, 0, 0, 0.54);
 }
-#btn-editar-perfil{
-    margin-left: -20px;
-    margin-top: 24px;
+#btn-alterar-senha{
+    margin-left: -40px;
 }
+
+#btn-cancelar-perfil{
+    margin-right: 10px;
+    background-color: #ffffff;
+    color: #212121;
+}
+
+#btn-cancelar-senha{
+    margin-left: 10px;
+}
+
+.btn-save{
+    /*background-color: #215BFF;*/
+    background-color: #3B84C2;
+}
+
+.btn-save:focus, .btn-save:hover{
+    background-color: #4070F9;
+}
+
 
 .inline-header{
     display: inline-block;
@@ -121,6 +141,10 @@ a {
         margin-left: 100px;
     }
     #btn-editar-perfil{
-    margin-top: 20px;
-}
+        margin-top: 20px;
+    }
+    #btn-cancelar-perfil{
+        margin-top: 10px;
+        margin-right: -9px;
+    }
 }
