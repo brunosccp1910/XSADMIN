@@ -22,7 +22,7 @@
             <input id="birthdate" name="birthdate" class="datepicker " type="text">
         </div>
         <div class="input-field col s4 right">
-            <input id="phone" name="phone" type="text" placeholder="99 99999-9999" class="validate">
+            <input id="phone" name="phone" type="tel" placeholder="99 99999-9999" class="validate">
             <label for="phone">Telefone</label>
         </div>
     </div>

@@ -133,6 +133,18 @@ a {
     margin-top: 40px;
 }
 
+.header-404{
+    font-size: 6.2rem;
+    margin: 2.1rem 0 1.68rem;
+    margin-left: -20px;
+}
+
+.message-404{
+    font-size: 2.2rem;
+    margin: 2.1rem 0 1.68rem;
+    margin-left: -20px;
+}
+
 @media only screen and (max-width: 992px) {
     .admin-header, main, .admin-footer {
         padding-left: 0;

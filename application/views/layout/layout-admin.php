@@ -110,6 +110,9 @@
         </footer>
     </body>
     <script>
+        function site_url(){
+            return <?php echo json_encode(base_url().'/index.php/'); ?>;
+        }
         $(document).ready(function () {
             $(".button-collapse").sideNav();
         });

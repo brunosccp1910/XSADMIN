@@ -1,10 +1,7 @@
 <script src="<?php echo base_url('assets/js/perfil.js'); ?>"></script>
-<script>
-    $(document).ready(function () {
-        $('#btn-salvar-perfil, #btn-cancelar-perfil').hide();
-    });
+<script src="<?php echo base_url('assets/inputmask/inputmask.js'); ?>"></script>
+<script src="<?php echo base_url('assets/inputmask/jquery.inputmask.js'); ?>"></script>
 
-</script>
 <div class="col s12 m9 l10">
     <div class="section perfil">
         <div class="col s4">
@@ -20,15 +17,15 @@
             <label for="name">Nome</label>
         </div>
         <div class="input-field col s8 m8">
-            <input disabled value="<?php echo $userData['email'] ?>" id="name" type="text" class="validate">
-            <label for="name">Email</label>
+            <input disabled value="<?php echo $userData['email'] ?>" id="email" type="email" class="validate">
+            <label for="email">Email</label>
         </div>
         <div class="input-field col s8  l4 m4 right">
             <label class="active" for="birthdate">Nascimento</label>
             <input disabled id="birthdate" name="birthdate" class="datepicker " type="text" value="<?php echo $userData['birthdate']; ?>">
         </div>
         <div class="input-field col s8 l4 m4 right">
-            <input disabled value="<?php echo $userData['phone']; ?>" id="phone" name="phone" type="text" placeholder="99 99999-9999" class="validate">
+            <input disabled value="<?php echo $userData['phone']; ?>" id="phone" name="phone" type="tel" placeholder="99 99999-9999" class="validate">
             <label for="phone">Telefone</label>
         </div>
         <a id="btn-alterar-senha" class="waves-effect waves-teal btn-flat modal-trigger" href="#modal-alterar-senha">Alterar Senha</a>
