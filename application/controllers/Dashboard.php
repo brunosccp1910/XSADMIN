@@ -13,7 +13,9 @@ class Dashboard extends MY_Controller{
     
     public function perfil(){
         $userData = $this->sessionstorage->getUserSession();
-        $this->template->load('dashboard/perfil', array('userData' => $userData), null, 'Perfil');
+        $this->load->model('usermodel');
+        $user = $this->usermodel->findById($userData['id']);
+        $this->template->load('dashboard/perfil', array('user' => $user), null, 'Perfil');
     }
     
     public function meugrupo(){

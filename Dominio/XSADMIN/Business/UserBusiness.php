@@ -37,7 +37,17 @@ class UserBusiness extends AbstractBusiness{
             throw new Exception($ex->getMessage());
         }
     }
-    
+    public function avaliableEmail($userEmail){
+       try{
+            if($this->findOneBy(array('email' => $userEmail)) != NULL){
+                return FALSE;
+            }else{
+                return TRUE;
+            }
+        }  catch (\Exception $ex){
+            throw new Exception($ex->getMessage());
+        } 
+    }
     function attachEntity($object) {
         return $object;
     }

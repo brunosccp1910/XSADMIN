@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     $('#btn-salvar-perfil').on('click', function () {
-        var dataPost = {nome: $('#nome').val(), email: $('#email').val(), birthdate: $('#birthdate').val(),
+        var dataPost = {name: $('#name').val(), email: $('#email').val(), birthdate: $('#birthdate').val(),
             phone: $('#phone').val()};
         $.post(site_url()+'usuario/editarperfil', dataPost);
     });
