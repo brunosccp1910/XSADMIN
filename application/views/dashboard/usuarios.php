@@ -97,7 +97,8 @@
     </div> 
     <script>
         $(document).ready(function(){
-           $('.collection').paginator(); 
+//           $('.collection').paginator();
+           $('.collection').contentPaginator();
         });
     </script>
 </div>
