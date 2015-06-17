@@ -37,6 +37,10 @@ nav .brand-title {
     position: absolute;
 }
 
+nav .brand-logo {
+    position: relative;
+}
+
 .collection{
     overflow: visible;
 }
@@ -143,6 +147,10 @@ a {
     font-size: 2.2rem;
     margin: 2.1rem 0 1.68rem;
     margin-left: -20px;
+}
+
+.marged-10{
+    margin: 10px;
 }
 
 @media only screen and (max-width: 992px) {

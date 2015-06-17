@@ -8,7 +8,7 @@
     $.fn.contentPaginator = function (options) {
 
         $.fn.contentPaginator.defaults = {
-            elementsPerPage: 2,
+            elementsPerPage: 7,
             visablePages: 5,
             childs: 'li',
             paginationClass: 'pagination',
@@ -62,7 +62,7 @@
                 case plugin.settings.numberClass:
                     pContent.addClass(plugin.settings.numberClass)
                             .append('<a href="#!" data-pos="' + dataPos + '">' + dataPos + '</a></li>');
-                    if(dataPos > plugin.settings.visablePages) pContent.hide();
+//                    if(dataPos > plugin.settings.visablePages) pContent.hide();
                     break;
             }
             return pContent;
@@ -130,7 +130,7 @@
                     }
                     ;
                     showPage(active);
-                    showNumber(active);
+                    showNumbers(active);
                 });
             });
         }
@@ -139,7 +139,7 @@
             return Math.round(plugin.settings.totalElements / plugin.settings.elementsPerPage);
         }
         
-        function showNumber(activeElement){
+        function showNumbers(activeElement){
             var visables = '.'+plugin.settings.numberClass+':visible';
             var half = Math.floor(plugin.settings.visablePages/2);
             var currentPos = parseInt($(activeElement).children('a').data('pos'));

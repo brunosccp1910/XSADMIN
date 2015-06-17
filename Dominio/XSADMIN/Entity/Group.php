@@ -23,7 +23,7 @@ class Group {
     
     
     /**
-     * @ORM\OneToMany(targetEntity="User", mappedBy="company", cascade={"all"}, orphanRemoval=true, fetch="LAZY") 
+     * @ORM\OneToMany(targetEntity="User", mappedBy="group", cascade={"all"}, orphanRemoval=true, fetch="LAZY") 
      */
     private $user;
     

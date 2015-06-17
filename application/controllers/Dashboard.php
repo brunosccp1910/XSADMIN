@@ -20,7 +20,13 @@ class Dashboard extends MY_Controller{
     
     public function meugrupo(){
         $userData = $this->sessionstorage->getUserSession();
-        $this->template->load('dashboard/meugrupo', array('userData' => $userData), null, 'Meu Grupo');
+        $this->load->model('groupmodel');
+        try{
+            $grupos = $this->groupmodel->findUserGroups($userData['id']);
+        }catch(\Exception $ex){
+            throw new Exception($ex->getMessage(), $ex->getCode(), $ex->getPrevious());
+        }
+        $this->template->load('dashboard/meugrupo', array('grupos' => $grupos), null, 'Meus Grupos');
     }
     public function usuarios(){
         $userData = $this->sessionstorage->getUserSession();

@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <button class="btn waves-effect waves-light" type="submit" name="cadastrar">Cadastrar
+    <button class="btn waves-effect waves-light green" type="submit" name="cadastrar">Cadastrar
         <i class="mdi-content-add right"></i>
     </button>
 </form>
