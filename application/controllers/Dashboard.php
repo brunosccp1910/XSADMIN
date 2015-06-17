@@ -26,7 +26,7 @@ class Dashboard extends MY_Controller{
         }catch(\Exception $ex){
             throw new Exception($ex->getMessage(), $ex->getCode(), $ex->getPrevious());
         }
-        $this->template->load('dashboard/meugrupo', array('grupos' => $grupos), null, 'Meus Grupos');
+        $this->template->load('dashboard/meusgrupos', array('grupos' => $grupos), null, 'Meus Grupos');
     }
     public function usuarios(){
         $userData = $this->sessionstorage->getUserSession();

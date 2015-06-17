@@ -10,7 +10,7 @@
             </div>
 
             <div class="col s12 m5 marged-10">
-                <a class="waves-effect waves-light btn btn-large green" href="<?php echo site_url('/grupo/criar'); ?>">
+                <a class="waves-effect waves-light btn btn-large green" href="<?php echo site_url('/grupo/novo'); ?>">
                     Criar Grupo
                     <i class="mdi-content-add right"></i>
                 </a>

@@ -50,7 +50,7 @@
                     <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/perfil'); ?>">Perfil</a>
                 </li>
                 <li class="bold">
-                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/meugrupo'); ?>">Meu Grupo</a>
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/meugrupo'); ?>">Meus Grupos</a>
                 </li>
                 
 <!--                <li class="no-padding">
@@ -71,7 +71,7 @@
                     <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/usuarios'); ?>">Usuários</a>
                 </li>
                 <li class="bold">
-                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/grupos'); ?>">Grupos</a>
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/grupos'); ?>">Todos os Grupos</a>
                 </li>
             </ul>
             
