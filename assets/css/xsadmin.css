@@ -158,6 +158,14 @@ a {
     max-height: 4rem;
 }
 
+.toast-error{
+    background-color: #c62828;
+}
+
+.toast-success{
+    background-color: #00e676;
+}
+
 @media only screen and (max-width: 992px) {
     .admin-header, main, .admin-footer {
         padding-left: 0;

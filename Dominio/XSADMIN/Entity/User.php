@@ -2,6 +2,7 @@
 namespace XSADMIN\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * Description of User
  *
@@ -20,8 +21,7 @@ class User {
     private $id;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Group", inversedBy="user", cascade={"persist"},fetch="EAGER")
-     * @ORM\JoinColumn(name="001_group_id", referencedColumnName="id")
+     * @ORM\OneToMany(targetEntity="UserGroup", mappedBy="user", cascade={"all"}, orphanRemoval=true, fetch="LAZY") 
      */
     private $group;
     
@@ -68,7 +68,7 @@ class User {
     function __construct($id = NULL, $group = NULL, $name = NULL, $email = NULL, $password = NULL, $admin = NULL, $active = NULL,
             $type = NULL, $birthdate = NULL, $phone = NULL) {
         $this->id = $id;
-        $this->group = $group;
+        $this->group = new ArrayCollection();
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
@@ -124,7 +124,6 @@ class User {
     }
 
     function setGroup(Group $group) {
-        $group->user->add($this);
         $this->group = $group;
     }
 

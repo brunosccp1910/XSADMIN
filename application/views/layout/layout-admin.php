@@ -50,23 +50,9 @@
                     <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/perfil'); ?>">Perfil</a>
                 </li>
                 <li class="bold">
-                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/meugrupo'); ?>">Meus Grupos</a>
+                    <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/meusgrupos'); ?>">Meus Grupos</a>
                 </li>
                 
-<!--                <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                        <li class="bold">
-                            <a class="collapsible-header  waves-effect waves-light">
-                                Meu Grupo
-                            </a>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <li><a href="color.html">Membros</a></li>
-                                </ul>
-                            </div>
-                        </li> 
-                    </ul>
-                </li>-->
                 <li class="bold">
                     <a class="waves-effect waves-light" href="<?php echo site_url('/dashboard/usuarios'); ?>">Usuários</a>
                 </li>

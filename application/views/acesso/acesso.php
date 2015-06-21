@@ -1,12 +1,23 @@
+<?php
+if ($this->session->flashdata('success') != NULL) {
+    $sucesso = $this->session->flashdata('success');
+    ?>
+    <script>
+        Materialize.toast('<i class="mdi-action-done"></i>' + '<?php echo $sucesso; ?>', 4000, 'toast-success');
+    </script>
+
+<?php } ?>
+
 <form class="col s6 offset-s3" method="post" action="<?php echo site_url('/acesso/login'); ?>">
     <h3 class="header offset-s3">Acesso</h3>
     <div class="error"> 
-    <?php
-        $messages = $this->session->flashdata();
-        if(count($messages)){?>
-        <span class="red-text text-darken-2"><?php echo $messages['error']; ?></span>
+        <?php
+        $messages = $this->session->flashdata('error');
+        if (count($messages)) {
+            ?>
+            <span class="red-text text-darken-2"><?php echo $messages['error']; ?></span>
         <?php }
-    ?>
+        ?>
     </div>
     <div class="row">
         <div class="input-field col s12">

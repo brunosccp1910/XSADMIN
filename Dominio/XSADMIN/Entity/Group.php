@@ -23,9 +23,10 @@ class Group {
     
     
     /**
-     * @ORM\OneToMany(targetEntity="User", mappedBy="group", cascade={"all"}, orphanRemoval=true, fetch="LAZY") 
+     * @ORM\OneToMany(targetEntity="UserGroup", mappedBy="group", cascade={"all"}, orphanRemoval=true, fetch="LAZY") 
      */
     private $user;
+    
     
     /**
      * @ORM\Column(type="string", length=200, nullable=false)
@@ -57,14 +58,14 @@ class Group {
      */
     private $address;
     
-    function __construct($id = NULL, $name = NULL, $acronym = NULL, $description = NULL, $email = NULL, $phone = NULL, $addess = NULL) {
+    function __construct($id = NULL, $name = NULL, $acronym = NULL, $description = NULL, $email = NULL, $phone = NULL, $address = NULL) {
         $this->is = $id;
                 $this->name = $name;
                 $this->acronym = $acronym;
                 $this->description = $description;
                 $this->email = $email;
                 $this->phone = $phone;
-                $this-> address = $addess;
+                $this-> address = $address;
                 $this->user = new ArrayCollection();
     }
     

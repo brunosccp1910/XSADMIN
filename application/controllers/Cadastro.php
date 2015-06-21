@@ -16,6 +16,8 @@ class Cadastro extends CI_Controller{
         $this->load->model('usermodel');
         try{
             $this->usermodel->cadastrar($dataPost['name'],$dataPost['email'],$dataPost['password'],$dataPost['birthdate'],$dataPost['phone']);
+           $this->session->set_flashdata('success', 'Usuário cadastrado. Você já pode acessar o sistema');
+            redirect('/acesso');
         }  catch (\Exception $ex){
             $retorno = $ex->getMessage();
         }

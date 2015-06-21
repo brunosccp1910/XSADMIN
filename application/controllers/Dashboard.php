@@ -18,7 +18,7 @@ class Dashboard extends MY_Controller{
         $this->template->load('dashboard/perfil', array('user' => $user), null, 'Perfil');
     }
     
-    public function meugrupo(){
+    public function meusgrupos(){
         $userData = $this->sessionstorage->getUserSession();
         $this->load->model('groupmodel');
         try{
