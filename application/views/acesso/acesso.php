@@ -12,10 +12,9 @@ if ($this->session->flashdata('success') != NULL) {
     <h3 class="header offset-s3">Acesso</h3>
     <div class="error"> 
         <?php
-        $messages = $this->session->flashdata('error');
-        if (count($messages)) {
+        if (count( $this->session->flashdata('error'))) {
             ?>
-            <span class="red-text text-darken-2"><?php echo $messages['error']; ?></span>
+            <span class="red-text text-darken-2"><?php echo $this->session->flashdata('error'); ?></span>
         <?php }
         ?>
     </div>

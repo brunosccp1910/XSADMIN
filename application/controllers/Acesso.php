@@ -13,7 +13,6 @@ class Acesso extends MY_Controller{
         }else{
             $this->template->load('acesso/acesso', array(), null, 'Entrar');
         }
-        
     }
     
     public function login(){

@@ -14,6 +14,7 @@ class Grupo extends MY_Controller{
     public function cadastrar(){
         $dataPost = $this->input->post();
         $this->load->model('groupmodel');
+
         try{
             $this->groupmodel->cadastrar($dataPost['name'],$dataPost['acronym'],$dataPost['email'],$dataPost['phone'],$dataPost['address'],
                     $dataPost['description']);

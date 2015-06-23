@@ -17,7 +17,10 @@
             </div>
             <?php
         } else {
-            
+            foreach($grupos as $userGroup){
+                $grupo = $userGroup->getGroup();
+                echo $grupo->getName();
+            }
         }
         ?>
 

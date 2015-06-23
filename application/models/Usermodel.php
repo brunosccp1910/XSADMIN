@@ -67,10 +67,12 @@ class UserModel extends CI_Model {
                 $session = array('id' => $user->getId(), 'name' => $user->getName(), 'email' => $user->getEmail(),
                     'admin' => $user->getAdmin(), 'active' => $user->getActive(), 'type' => $user->getType(),
                     'birthdate' => $user->getBirthdate()->format('d/m/Y'), 'phone' => $user->getPhone());
-                if ($user->getGroup() != NULL) {
-                    $session['group_id'] = $user->getGroup()->getId();
-                    $session['group_name'] = $user->getGroup()->getName();
+                $groups = array();
+                foreach($user->getGroup() as $userGroup){
+                    $group = $userGroup->getGroup();
+                    $groups[] = array('group_id' => $group->getId(), 'group_name' => $group->getName());
                 }
+                $session['groups'] = $groups;
             }
             return $session;
         } catch (\Exception $ex) {

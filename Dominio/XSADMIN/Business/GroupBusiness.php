@@ -24,13 +24,4 @@ class GroupBusiness extends AbstractBusiness{
     public function validarObjeto($object) {
         return TRUE;
     }
-    
-    public function findUserGroups($userId){
-        $query = "SELECT grupo FROM XSADMIN\Entity\Group grupo JOIN grupo.user user WHERE user.id = :userId";
-        try{
-            return $this->dao->findByParam($query, array('userId' => $userId));
-        }  catch (\Exception $ex){
-            throw new \Exception($ex->getMessage(), $ex->getCode(), $ex->getPrevious());
-        }
-    }
 }

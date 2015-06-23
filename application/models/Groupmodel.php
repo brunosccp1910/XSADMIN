@@ -7,14 +7,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 use XSADMIN\Facade\GroupFacade;
+use XSADMIN\Facade\UserGroupFacade;
+use XSADMIN\Facade\UserFacade;
 use XSADMIN\Entity\Group;
+use XSADMIN\Entity\UserGroup;
+
 
 
 class Groupmodel extends CI_Model{
     function findUserGroups($userId){
-        $facade = new GroupFacade();
+        $facade = new UserGroupFacade();
         try{
-            return $facade->findUserGroups($userId);
+            return $facade->findAllGroupsUser($userId);
         }catch(\Exception $ex){
             throw new Exception($ex->getMessage(), $ex->getCode(), $ex->getPrevious());
         }
@@ -22,13 +26,23 @@ class Groupmodel extends CI_Model{
     
     function cadastrar($name, $acronym, $email, $phone, $address, $description){
         $facade = new GroupFacade();
+        $userGroupFacade = new UserGroupFacade();
+        $userFacade = new UserFacade();
+        $userData = $this->sessionstorage->getUserSession();
         if($name == NULL || $name == ''){
             throw new Exception('O nome do grupo não pode ser nulo');
         }
         
         $grupo = new Group(NULL, $name, $acronym, $description, $email, $phone, $address);
         try{
-            $facade->save($grupo);
+            $savedGroup = $facade->save($grupo);
+            $user = $userFacade->findById($userData['id']);
+
+            $userGroup = new UserGroup(NULL, TRUE);
+            $userGroup->setGroup($savedGroup);
+            $userGroup->setUser($user);
+
+            $userGroupFacade->save($userGroup);
             return TRUE;
         }  catch (\Exception $ex){
             throw new Exception($ex->getMessage());

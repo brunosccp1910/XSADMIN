@@ -25,7 +25,8 @@ $(document).ready(function () {
     $('#btn-salvar-perfil').on('click', function () {
         var dataPost = {name: $('#name').val(), email: $('#email').val(), birthdate: $('#birthdate').val(),
             phone: $('#phone').val()};
-        $.post(site_url()+'usuario/editarperfil', dataPost);
+        $.post(site_url()+'usuario/editarperfil', dataPost, function(response){
+        });
     });
 
 });
