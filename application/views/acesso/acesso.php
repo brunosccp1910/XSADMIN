@@ -20,12 +20,12 @@ if ($this->session->flashdata('success') != NULL) {
     </div>
     <div class="row">
         <div class="input-field col s12">
-            <i class="mdi-action-account-circle prefix"></i>
+            <i class="material-icons prefix">account_circle</i>
             <input id="email" name="email" type="email" class="validate">
             <label for="email">Email</label>
         </div>
         <div class="input-field col s12">
-            <i class="mdi-action-lock prefix"></i>
+            <i class="material-icons prefix">lock</i>
             <input id="password" name="password" type="password" class="validate">
             <label for="password">Senha</label>
         </div>
@@ -33,7 +33,7 @@ if ($this->session->flashdata('success') != NULL) {
     </div>
 
     <button class="btn waves-effect waves-light" type="submit">Entrar
-        <i class="mdi-content-send right"></i>
+        <i class="material-icons right">input</i>
     </button>
 </form>
 

@@ -48,4 +48,29 @@ class Groupmodel extends CI_Model{
             throw new Exception($ex->getMessage());
         }
     }
+
+    function removerMembro($groupId, $userId){
+        $facade = new GroupFacade();
+        try{
+            $facade->removeMember($groupId, $userId);
+        }catch (\Exception $ex){
+            throw new \Exception($ex->getMessage());
+        }
+    }
+
+    function arrayAllMembros($id){
+        $facade = new GroupFacade();
+        try{
+            $grupo =  $facade->findById($id);
+            $usuarios = array();
+            foreach($grupo->getUser() as $userGroup){
+                $user = $userGroup->getUser();
+                $usuarios[] = array('id' => $user->getId(), 'name' => $user->getName());
+            }
+        }catch(\Exception $ex){
+            throw new Exception('Erro ao buscar pelos membros deste grupo');
+        }
+
+        return $usuarios;
+    }
 }

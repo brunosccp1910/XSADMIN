@@ -3,14 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title><?php echo $title != '' ? $title . ' | ' : '' ?> XSADMIN</title>
+        <link rel='shortcut icon' type='image/x-icon' href='<?php echo base_url(); ?>/assets/images/favicon16.ico'/>
         <!-- CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/materialize/css/materialize.css">
+        <link href="<?php echo base_url(); ?>/assets/material-icons/material-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/xsadmin.css">
 
         <!-- Scripts -->
         <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.js"></script>
         <script src="<?php echo base_url(); ?>/assets/materialize/js/materialize.js"></script>
         <script src="<?php echo base_url(); ?>/assets/js/xsadmin.js"></script>
+        <script src="<?php echo base_url(); ?>/assets/js/jquery.blockUI.js"></script>
     </head>
     <body>
         <header class="admin-header">
@@ -43,7 +46,8 @@
             <ul id="nav-mobile" class="side-nav fixed">
                 <li class="logo">
                     <a id="logo-container" class="brand-logo" href="<?php echo site_url('/dashboard'); ?>">
-                        <b>XSADMIN</b>
+                        <img id="img-logo" src="<?php echo base_url(); ?>/assets/images/logo-xsadmin-v.png" height="58" width="200">
+
                     </a>
                 </li>
                 <li class="bold">
@@ -98,9 +102,11 @@
     <script>
         function site_url(){
             return <?php echo json_encode(base_url().'/index.php/'); ?>;
-        }
+        };
+
         $(document).ready(function () {
             $(".button-collapse").sideNav();
+            $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
         });
     </script>
 </html>

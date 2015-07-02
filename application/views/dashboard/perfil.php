@@ -57,21 +57,6 @@
                 <label for="old-password">Senha Antiga</label>
             </div>
         </div>
-        <!--        <div class="input-field col s12">
-                    <i class="mdi-action-lock prefix"></i>
-                    <input id="old-password" name="old-password" type="password" class="validate">
-                    <label for="old-password">Senha Antiga</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="mdi-action-lock prefix"></i>
-                    <input id="password" name="password" type="password" class="validate">
-                    <label for="password">Nova senha</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="mdi-action-lock prefix"></i>
-                    <input id="password-cfm" name="password-cfm" type="password" class="validate">
-                    <label for="password-cfm">Confirme a nova senha</label>
-                </div>-->
     </div>
     <div class="modal-footer">
         <a id="btn-cancelar-senha" class="modal-action modal-close waves-effect waves-red btn-flat " href="#!">Cancelar</a>

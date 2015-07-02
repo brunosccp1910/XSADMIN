@@ -10,7 +10,7 @@ class Usuario extends MY_Controller{
     
     public function editarperfil(){
         if(!$this->input->is_ajax_request()){
-            redirect('erros/_404');
+            redirect('error/_404');
         }
         $data = $this->input->post();
         $this->load->model('usermodel');

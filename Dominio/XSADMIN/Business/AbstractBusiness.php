@@ -73,7 +73,7 @@ abstract class AbstractBusiness {
     public function findById($id) {
 
         if (!is_numeric($id)) {
-            throw new BusinessException("Id deve ser numérico!");
+            throw new \BusinessException("Id deve ser numérico!");
         }
 
         try {
