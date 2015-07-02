@@ -26,6 +26,7 @@ $(document).ready(function () {
         var dataPost = {name: $('#name').val(), email: $('#email').val(), birthdate: $('#birthdate').val(),
             phone: $('#phone').val()};
         $.post(site_url()+'usuario/editarperfil', dataPost, function(response){
+
         });
     });
 
